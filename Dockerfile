@@ -1,4 +1,4 @@
-FROM php:8.1-fpm-alpine
+FROM php:8.2-fpm-alpine
 
 ARG SHOPIFY_API_KEY
 ENV SHOPIFY_API_KEY=$SHOPIFY_API_KEY
@@ -19,8 +19,8 @@ COPY web/nginx.conf /etc/nginx/nginx.conf
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 RUN composer install
-RUN touch /app/storage/db.sqlite
-RUN chown www-data:www-data /app/storage/db.sqlite
+RUN touch /app/storage/database.sqlite
+RUN chown www-data:www-data /app/storage/database.sqlite
 
 RUN cd frontend && npm install && npm run build
 RUN composer build
