@@ -19,10 +19,11 @@ COPY web/nginx.conf /etc/nginx/nginx.conf
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
 RUN composer install
+RUN composer dump-autoload
 RUN touch /app/storage/database.sqlite
 RUN chown www-data:www-data /app/storage/database.sqlite
 
 RUN cd frontend && npm install && npm run build
 RUN composer build
 
-ENTRYPOINT [ "/app/entrypoint.sh" ]
+ENTRYPOINT [ "/app/entrypoint.sh" ]	
