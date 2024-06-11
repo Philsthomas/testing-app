@@ -3,7 +3,7 @@
 client_id = "a96c10e2a9ec3b9cf38dc2373db9f741"
 name = "testing-app"
 handle = "testing-app-721"
-application_url = "https://federal-sauce-cite-article.trycloudflare.com"
+application_url = "https://sea-lion-app-7vmil.ondigitalocean.app"
 embedded = true
 
 [build]
@@ -17,9 +17,9 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [
-  "https://federal-sauce-cite-article.trycloudflare.com/auth/callback",
-  "https://federal-sauce-cite-article.trycloudflare.com/auth/shopify/callback",
-  "https://federal-sauce-cite-article.trycloudflare.com/api/auth/callback"
+  "https://sea-lion-app-7vmil.ondigitalocean.app/auth/callback",
+  "https://sea-lion-app-7vmil.ondigitalocean.app/auth/shopify/callback",
+  "https://sea-lion-app-7vmil.ondigitalocean.app/api/auth/callback"
 ]
 
 [webhooks]
